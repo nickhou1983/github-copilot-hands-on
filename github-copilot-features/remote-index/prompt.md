@@ -1,1 +1,0 @@
-#githubRepo jacwu/github-materials: the attributes supported by Element Plus dialog component

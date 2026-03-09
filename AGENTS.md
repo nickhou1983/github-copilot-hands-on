@@ -1,1 +1,0 @@
-For every request, ensure the final step is to call the teams notification skill to report task completion.

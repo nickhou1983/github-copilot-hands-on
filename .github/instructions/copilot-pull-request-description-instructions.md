@@ -1,1 +1,0 @@
-When generating pull request description, add comment before the message in the following format: 'GitHub Copilot generated: change details'. 
