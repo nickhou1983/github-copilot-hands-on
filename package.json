@@ -17,7 +17,9 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^20.8.0",
-    "@types/axios": "^0.14.0"
+    "marked": "^17.0.4",
+    "puppeteer-core": "^24.38.0"
   }
 }

@@ -1,88 +1,23 @@
 {
-    "servers": {
-            "mcp-server-time": {
-                "command": "python",
-                "args": [
-                    "-m",
-                    "mcp_server_time",
-                    "--local-timezone=America/New_York",
-                ],
-                "env": {}
-            },
-            // for macOS, use npx shown below instead of cmd
-            // "githuboMac": {
-            //     "command": "npx",
-            //     "args": [
-            //         "-y",
-            //         "@modelcontextprotocol/server-github"
-            //     ],
-            //     "env": {
-            //         "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
-            //     }
-            // },
-            "github": {
-                "type": "http",
-                "url": "https://api.githubcopilot.com/mcp/"
-            },
-            "copilot-spaces": {
-                "type": "http",
-                "url": "https://api.githubcopilot.com/mcp/x/copilot_spaces"
-            },
-            "playwright": {
-                "command": "cmd",
-                "args": [
-                    "/c",
-                    "npx",
-                    "-y",
-                    "@executeautomation/playwright-mcp-server"
-                ],
-                "env": {}
-            },
-            "sequential-thinking": {
-                "command": "cmd",
-                "args": [
-                    "/c",
-                    "npx",
-                    "-y",
-                    "@modelcontextprotocol/server-sequential-thinking"
-                ]
-            },
-            "dalle3": {
-                "command": "node",
-                "args": [
-                    "<fullpath>\\build\\index.js"
-                ],
-                "env": {
-                    "AZURE_OPENAI_ENDPOINT": "<endpoint>",
-                    "AZURE_OPENAI_API_KEY": "<api_key>",
-                    "AZURE_OPENAI_DEPLOYMENT_NAME": "<deployment_name>"
-                }
-            },
-            "my_mcp": {
-                "type": "sse",
-                "url": "http://127.0.0.1:4000/sse"
-            },
-            "mcp_server_mysql": {
-                "command": "cmd",
-                "args": [
-                    "/c",
-                    "npx",
-                    "-y",
-                    "@benborla29/mcp-server-mysql"
-                ],
-                "env": {
-                    "MYSQL_HOST": "<host>",
-                    "MYSQL_PORT": "<port>",
-                    "MYSQL_USER": "<user>",
-                    "MYSQL_PASS": "<pass>",
-                    "MYSQL_DB": "<db>",
-                    "MYSQL_SSL": "true"
-                }   
-            },
-            "ado": {
-                "type": "stdio",
-                "command": "npx",
-                "args": ["-y", "@azure-devops/mcp", "<orgname>", "--authentication", "envvar"]
-            }
-    }
+	"servers": {
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp/"
+		},
+		"copilot-spaces": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp/x/copilot_spaces"
+		},
+		"ado": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@azure-devops/mcp",
+				"<orgname>",
+				"--authentication",
+				"envvar"
+			]
+		}
+	}
 }
