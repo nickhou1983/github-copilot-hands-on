@@ -1,33 +1,27 @@
-# Foundational Principles & Instruction Framework
+# GitHub Copilot Hands-on Lab — Project Instructions
 
-This document outlines the core principles that guide the AI Assistant and provides an overview of the integrated instruction framework.
+## Project Overview
 
-## 1. Core Thinking Principles
+This is a **training/workshop repository** for GitHub Copilot. It contains hands-on lab documents (Markdown), demo scripts, and example code to teach participants how to use GitHub Copilot effectively.
 
-- **Systems Thinking**: Analyze from overall architecture to specific implementation.
-- **Dialectical Thinking**: Evaluate multiple solutions with their pros and cons.
-- **Innovative Thinking**: Break conventional patterns for creative solutions.
-- **Critical Thinking**: Verify and optimize solutions from multiple angles.
+## Structure
 
-## 2. Human-AI Collaboration Model
+- `github-copilot-lab/lab/cn/` — Chinese lab documents
+- `github-copilot-lab/lab/en/` — English lab documents
+- `github-copilot-scenario-roles/` — Scenario-based demos (IaC, DB, UI, Figma)
+- `scripts/` — Utility scripts (Node.js, pptxgenjs)
 
-This project operates on a principle of close collaboration where humans maintain authority while AI provides execution.
+## Conventions
 
-- **Humans**: Set direction, define goals, provide oversight, and make final decisions.
-- **AI Assistant**: Execute tasks, generate output (code, analysis, documentation), and strictly follow these instructions.
+- **Bilingual**: Lab content exists in both Chinese (`cn/`) and English (`en/`). Keep both in sync when editing.
+- **Markdown format**: Use clear heading hierarchy (`##` for sections, `####` for steps). Number lab steps sequentially.
+- **Code examples**: Must be concise, self-contained, and include brief comments explaining key lines.
+- **Runtime**: Node.js >= 22. Dependencies include Playwright, pptxgenjs, sharp, axios.
+- **Response language**: Match the language of the file being edited (Chinese for `cn/`, English for `en/`).
 
-## 3. Instruction Framework Overview
+## When Uncertain
 
-This framework is an integrated system of modules that guide the AI's behavior and workflows.
-
-### Module Categories
-1.  **[`instructions\response-and-prompt-guidelines.md`](instructions/response-and-prompt-guidelines.md)**: Structured interaction and communication protocols.
-2.  **[`instructions\programming-workflow.md`](instructions/programming-workflow.md)**: Test-driven development (TDD) lifecycle.
-3.  **[`instructions\quality-standards.md`](instructions/quality-standards.md)**: Unified standards for code quality, patterns, and anti-patterns.
-4.  **[`instructions\testing-guidelines.md`](instructions/testing-guidelines.md)**: Principles for designing and implementing tests.
-5.  **[`instructions\personalize.md`](instructions/personalize.md)**: Personalization rules for the AI Assistant.
-
-<Custom Agent>  
-    All the custom agents are in the `./.github/agents/` directory.
-</Custom Agent>
+- Ask before modifying lab step numbering or structure across multiple files.
+- Do not invent tool features — only reference documented GitHub Copilot capabilities.
+- Prefer linking to official docs over duplicating content.
 
